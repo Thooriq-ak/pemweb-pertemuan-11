@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div>
+      <label for="angka1">Masukan Angka 1: </label>
+      <input type="number" id="angka1" />
+      <label>+</label>
+      <label for="angka2">Masukan Angka 2: </label>
+      <input type="number" id="angka2" />
+      <button onclick="pertambahan()">Hitung</button>
+    </div>
+
+    <div>
+      <p>Hasil : <span id="hasilEqual">0</span></p>
+    </div>
+    <script>
+      function pertambahan() {
+        let angka1 = document.getElementById("angka1").value;
+        let angka2 = document.getElementById("angka2").value;
+
+        let equal = parseFloat(angka1) + parseFloat(angka2);
+
+        let hasilEqual = document.getElementById("hasilEqual");
+
+        hasilEqual.innerHTML = equal;
+      }
+    </script>
+  </body>
+</html>
